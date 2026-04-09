@@ -19,6 +19,9 @@ The data flows through five distinct layers:
 4.  **Intelligence (Python):** Analyzes process frequency and risk to generate a "Malice Score."
 5.  **Visualization (Grafana):** Dashboarding and threshold-based alerting to Telegram.
 
+## 🔔 Example Alert
+See [SECURITY_ALERT_SUSPICIOUS_SUDO_USAGE.md](./SECURITY_ALERT_SUSPICIOUS_SUDO_USAGE.md) for a recorded Grafana alert and alert metadata.
+
 ## ⚖️ The Hard Truth (Disclaimer)
 This project is an **Educational Sandbox** designed to demonstrate the eBPF telemetry stack. It is a passive observation tool and does not currently support active enforcement (blocking). It is intended for research and portfolio demonstration.
 
