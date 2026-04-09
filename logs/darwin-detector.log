@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/cool/darwin-system/src/detection/detector.py", line 2, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/cool/darwin-system/src/detection/detector.py", line 2, in <module>
+    import pandas as pd
+ModuleNotFoundError: No module named 'pandas'
+bash: line 1: /home/cool/darwin-system/.venv/bin//home/cool/darwin-system/.venv/bin/python3: No such file or directory
+🧠 Initializing DARWIN AI Detector...
+📡 Listening for kernel events...
+🧠 Initializing DARWIN AI Detector...
+📡 Listening for kernel events...
+🧠 Initializing DARWIN AI Detector...
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/cool/darwin-system/src/detection/detector.py", line 14, in <module>
+    consumer = KafkaConsumer(
+               ^^^^^^^^^^^^^^
+  File "/home/cool/darwin-system/.venv/lib/python3.12/site-packages/kafka/consumer/group.py", line 397, in __init__
+    self._client = self.config['kafka_client'](metrics=self._metrics, **self.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cool/darwin-system/.venv/lib/python3.12/site-packages/kafka/client_async.py", line 262, in __init__
+    self.config['api_version'] = self.check_version()
+                                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/cool/darwin-system/.venv/lib/python3.12/site-packages/kafka/client_async.py", line 1076, in check_version
+    raise Errors.NoBrokersAvailable()
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+🧠 Initializing DARWIN AI Detector...
+📡 Listening for kernel events...

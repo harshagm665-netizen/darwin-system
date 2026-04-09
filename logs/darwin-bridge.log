@@ -1,0 +1,190 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/cool/darwin-system/src/bridge/influx_exporter.py", line 5, in <module>
+    from influxdb_client import InfluxDBClient, Point, WritePrecision
+ModuleNotFoundError: No module named 'influxdb_client'
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/cool/darwin-system/src/bridge/influx_exporter.py", line 5, in <module>
+    from influxdb_client import InfluxDBClient, Point, WritePrecision
+ModuleNotFoundError: No module named 'influxdb_client'
+bash: line 1: /home/cool/darwin-system/.venv/bin//home/cool/darwin-system/.venv/bin/python3: No such file or directory
+🚀 Initializing DARWIN Data Bridge...
+✅ Connected to InfluxDB
+✅ Listening to Kafka Topic: syscalls-proto
+--- Bridge Active. Forwarding events to Grafana... ---
+🚀 Initializing DARWIN Data Bridge...
+✅ Connected to InfluxDB
+✅ Listening to Kafka Topic: syscalls-proto
+--- Bridge Active. Forwarding events to Grafana... ---
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/cool/darwin-system/src/bridge/influx_exporter.py", line 47, in <module>
+    main()
+  File "/home/cool/darwin-system/src/bridge/influx_exporter.py", line 18, in main
+    consumer = KafkaConsumer(
+               ^^^^^^^^^^^^^^
+  File "/home/cool/darwin-system/.venv/lib/python3.12/site-packages/kafka/consumer/group.py", line 397, in __init__
+    self._client = self.config['kafka_client'](metrics=self._metrics, **self.config)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cool/darwin-system/.venv/lib/python3.12/site-packages/kafka/client_async.py", line 262, in __init__
+    self.config['api_version'] = self.check_version()
+                                 ^^^^^^^^^^^^^^^^^^^^
+  File "/home/cool/darwin-system/.venv/lib/python3.12/site-packages/kafka/client_async.py", line 1076, in check_version
+    raise Errors.NoBrokersAvailable()
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+📡 DARWIN Bridge: Processing Kafka Queue...
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: launch_darwin.s
+✅ [SUCCESS] Sent to Grafana: launch_darwin.s
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: tar
+✅ [SUCCESS] Sent to Grafana: tar
+✅ [SUCCESS] Sent to Grafana: tar
+✅ [SUCCESS] Sent to Grafana: tar
+✅ [SUCCESS] Sent to Grafana: tar
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: launch_darwin.s
+✅ [SUCCESS] Sent to Grafana: sudo
+✅ [SUCCESS] Sent to Grafana: docker
+✅ [SUCCESS] Sent to Grafana: docker
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: WSLGd
+✅ [SUCCESS] Sent to Grafana: WSLGd
+✅ [SUCCESS] Sent to Grafana: weston
+✅ [SUCCESS] Sent to Grafana: weston
+✅ [SUCCESS] Sent to Grafana: Xwayland
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: WSLGd
+✅ [SUCCESS] Sent to Grafana: WSLGd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: weston
+✅ [SUCCESS] Sent to Grafana: Xwayland
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: weston
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: cron
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: Relay
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: lesspipe
+✅ [SUCCESS] Sent to Grafana: lesspipe
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: dockerd
+✅ [SUCCESS] Sent to Grafana: systemd
+✅ [SUCCESS] Sent to Grafana: (-service)
+✅ [SUCCESS] Sent to Grafana: wsl-pro-service
+✅ [SUCCESS] Sent to Grafana: wsl-pro-service
+✅ [SUCCESS] Sent to Grafana: wsl-pro-service
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: bash
+✅ [SUCCESS] Sent to Grafana: cloud-init
+✅ [SUCCESS] Sent to Grafana: cloud-init
+✅ [SUCCESS] Sent to Grafana: cloud-init
+✅ [SUCCESS] Sent to Grafana: cloud-init
+✅ [SUCCESS] Sent to Grafana: wsl-pro-service
+✅ [SUCCESS] Sent to Grafana: WSLGd
+✅ [SUCCESS] Sent to Grafana: WSLGd
+✅ [SUCCESS] Sent to Grafana: weston
+✅ [SUCCESS] Sent to Grafana: Xwayland
+✅ [SUCCESS] Sent to Grafana: sh
+✅ [SUCCESS] Sent to Grafana: weston

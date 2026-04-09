@@ -1,0 +1,18 @@
+[sudo] password for cool: [sudo] password for cool: [sudo] password for cool: [sudo] password for cool: [sudo] password for cool: Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/cool/darwin-system/src/collector/main.py", line 4, in <module>
+    from bcc import BPF
+ModuleNotFoundError: No module named 'bcc'
+[sudo] password for cool: Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/cool/darwin-system/src/collector/main.py", line 4, in <module>
+    from bcc import BPF
+ModuleNotFoundError: No module named 'bcc'
+[sudo] password for cool: Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/cool/darwin-system/src/collector/main.py", line 4, in <module>
+    from bcc import BPF
+ModuleNotFoundError: No module named 'bcc'

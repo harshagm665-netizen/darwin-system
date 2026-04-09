@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message SyscallEvent {
+  enum Type { EXECVE = 0; OPENAT = 1; CONNECT = 2; WRITE = 3; }
+  
+  uint32 pid = 1;
+  string comm = 2;
+  Type event_type = 3;
+  uint64 timestamp_ns = 4;
+  
+  // Dynamic metadata for different syscalls
+  // e.g., "path": "/etc/passwd" or "ip": "192.168.1.1"
+  map<string, string> metadata = 5; 
+}

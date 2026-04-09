@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  # The Time-Series Database
+  influxdb:
+    image: influxdb:2.7
+    container_name: darwin_db
+    ports:
+      - "8086:8086"
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=harsha
+      - DOCKER_INFLUXDB_INIT_PASSWORD=password123
+      - DOCKER_INFLUXDB_INIT_ORG=darwin_intel
+      - DOCKER_INFLUXDB_INIT_BUCKET=syscalls
+
+  # The Dashboard
+  grafana:
+    image: grafana/grafana:latest
+    container_name: darwin_grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - influxdb
