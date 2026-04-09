@@ -1,66 +1,105 @@
-# 🛡️ DARWIN — eBPF Threat Detection & Security Telemetry
+<div align="center">
 
-DARWIN is a focused security telemetry platform that captures kernel-level process activity, streams it through a resilient pipeline, and makes suspicious behavior visible through dashboards and alerts.
+<img src="https://img.shields.io/badge/DARWIN-eBPF%20IDS-blue?style=for-the-badge&logo=linux&logoColor=white" alt="DARWIN IDS" />
+<br/>
 
-This repository is built as a real-world observability prototype for:
-- threat detection
-- incident response validation
-- security telemetry architecture
-- kernel-aware monitoring
+<h1>🛡️ DARWIN</h1>
+<p><strong>Kernel-Aware Security Telemetry for Real-Time Threat Detection</strong></p>
 
----
+<div>
+  <img src="https://img.shields.io/badge/Python-3.11+-blue.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/eBPF-Kernel%20Tracing-000000?style=for-the-badge&logo=linux&logoColor=white" alt="eBPF" />
+  <img src="https://img.shields.io/badge/Kafka-Data%20Streaming-yellow.svg?style=for-the-badge&logo=apachekafka&logoColor=black" alt="Kafka" />
+  <img src="https://img.shields.io/badge/InfluxDB-Time%20Series-00b4d8.svg?style=for-the-badge&logo=influxdb&logoColor=white" alt="InfluxDB" />
+  <img src="https://img.shields.io/badge/Grafana-Alerting-f04e4e?style=for-the-badge&logo=grafana&logoColor=white" alt="Grafana" />
+</div>
 
-## What DARWIN Does
-
-DARWIN detects suspicious process execution and privilege escalation by combining:
-
-- **eBPF syscall tracing** for process and command execution visibility
-- **Kafka event streaming** for scalable, decoupled ingestion
-- **InfluxDB storage** for fast time-series analysis
-- **Grafana dashboards** for monitoring and alerting
-- **Telegram notifications** for critical security events
+<br />
+</div>
 
 ---
 
-## Key Capabilities
+## 🌌 Overview
 
-- Kernel-level capture of process execution events
-- Kafka-based event transport for fault tolerance and buffering
-- Structured InfluxDB export for high-cardinality telemetry
-- Behavior scoring and detection logic in Python
-- Grafana alerting for suspicious `sudo` usage
-- Documentation of detected alerts for audit readiness
+**DARWIN** is a production-inspired security telemetry platform that elevates kernel-level process monitoring into a modern detection pipeline.
 
----
+Built for security engineers, SOC teams, and research labs, DARWIN captures process execution with **eBPF**, streams events through **Kafka**, writes structured telemetry to **InfluxDB**, and exposes critical detections through **Grafana**.
 
-## Architecture
-
-1. **Sensor** — `src/sensor/` and `src/sensor/darwin_sensor.bpf.c`
-   - eBPF instrumentation captures runtime process activity at the kernel boundary.
-2. **Collector** — `src/collector/main.py`
-   - Loads BPF and pushes raw events into Kafka topics.
-3. **Bridge** — `src/bridge/exporter.py`, `src/bridge/influx_exporter.py`
-   - Reads Kafka payloads and writes telemetry into InfluxDB.
-4. **Intelligence** — `src/detection/`
-   - Applies scoring and detection rules, then surfaces alerts.
-5. **Visualization** — Grafana dashboards, alert rules, and Telegram integration.
+This project is designed as a high-fidelity visibility engine for real-time privilege escalation and suspicious process behavior detection.
 
 ---
 
-## Example Alert Record
-A suspicious `sudo` invocation was captured and recorded as an alert.
+## 🏗️ Core Architecture
 
-- Alert Name: **Suspicious Sudo Usage**
-- Severity: **critical**
-- Created: **2026-04-09 16:29:10**
-- Summary: **Sudo command detected on Darwin-System!**
+DARWIN separates sensor capture, event transport, data export, and analytics into distinct runtime components.
 
-Full alert metadata:
+```mermaid
+flowchart LR
+    S[Sensor / eBPF] -->|Raw Event Stream| C[Collector / Kafka Producer]
+    C -->|Kafka Topics| B[Bridge / Kafka Consumer]
+    B -->|InfluxDB Writes| T[Time-Series Storage]
+    B -->|Detection Payloads| D[Detection Engine]
+    D -->|Alerts| G[Grafana / Telegram]
+    G -->|Visuals + Alerts| U[Operator Dashboard]
+```
+
+---
+
+## ⚡ Technical Flagships
+
+| Subsystem | What it protects | Implementation focus |
+| :--- | :--- | :--- |
+| **Kernel Visibility** | Process execution trace fidelity | `src/sensor/darwin_sensor.bpf.c` + eBPF probes |
+| **Stream Resilience** | High-throughput telemetry delivery | Kafka producer/consumer pipeline |
+| **Time-Series Export** | Fast query-ready observability | `src/bridge/influx_exporter.py` |
+| **Threat Detection** | Suspicious `sudo` / escalation behavior | `src/detection/` analytics and malice scoring |
+| **Alerting** | Incident-ready monitoring | Grafana rules + Telegram notifications |
+
+---
+
+## 📌 What DARWIN Detects
+
+- Suspicious privilege escalation via `sudo`
+- Anomalous process execution spikes
+- High-risk command activity across container and host processes
+- Kernel-level execution context with minimal noise
+
+---
+
+## 🚀 Quick Start
+
+> See **[INSTALL.md](./INSTALL.md)** for complete environment setup and prerequisites.
+
+```bash
+git clone https://github.com/harshagm665-netizen/darwin-system.git
+cd darwin-system
+```
+
+Start the platform:
+
+```bash
+docker compose up -d
+```
+
+Open Grafana and confirm the DARWIN dashboards are rendering data.
+
+---
+
+## 🔍 Example Alert
+
+A suspicious `sudo` invocation was detected and recorded for review.
+
+- **Alert:** Suspicious Sudo Usage
+- **Severity:** critical
+- **Created:** 2026-04-09 16:29:10
+- **Summary:** Sudo command detected on Darwin-System!
+
+Full alert record:
 - [SECURITY_ALERT_SUSPICIOUS_SUDO_USAGE.md](./SECURITY_ALERT_SUSPICIOUS_SUDO_USAGE.md)
 
 ---
 
-## Visual Output
+## 🎛️ Visual Output
 
 ![Live System Activity](./images/Screenshot 2026-04-09 153923.png)
 
@@ -68,43 +107,44 @@ Full alert metadata:
 
 ---
 
-## Getting Started
+## 📂 Project Structure
 
-1. Clone the repository
-   ```bash
-   git clone https://github.com/harshagm665-netizen/darwin-system.git
-   cd darwin-system
-   ```
-
-2. Install dependencies and prepare the environment
-   ```bash
-   # Follow the instructions in INSTALL.md
-   ```
-
-3. Start the platform
-   ```bash
-   docker compose up -d
-   ```
-
-4. Open Grafana and confirm dashboards and alerts are active.
-
----
-
-## Recommended Workflow
-
-- Extend `src/sensor/` to capture additional syscall metadata.
-- Use `src/collector/` to tune Kafka serialization and topic configuration.
-- Update `src/bridge/` to map new event fields into InfluxDB measurements.
-- Refine detection rules in `src/detection/` for better signal quality.
+```
+darwin-system/
+├── src/
+│   ├── bridge/            # Kafka -> InfluxDB export layer
+│   ├── collector/         # BPF loader and Kafka producer
+│   ├── dashboard/         # Grafana support utilities and web app
+│   ├── detection/         # Risk scoring and behavioral analysis
+│   ├── red_agent/         # alerting and response agent
+│   ├── sensor/            # eBPF source and C runtime
+├── deploy/                # Docker and Prometheus deployment
+├── logs/                  # Runtime logs and diagnostics
+├── README.md
+├── INSTALL.md
+├── STARTUP.md
+├── docker-compose.yml
+└── requirements.txt
+```
 
 ---
 
-## Notes
+## 🧠 Recommended Workflow
 
-This repository is designed as a monitoring and detection engine, not an enforcement framework. It is ideal for security research, proof-of-concept deployments, and telemetry engineering assessments.
+- **Extend sensor coverage** in `src/sensor/`
+- **Tune Kafka topics and serialization** in `src/collector/`
+- **Map events for observability** in `src/bridge/`
+- **Refine detection logic** in `src/detection/`
+- **Validate alert flow** through Grafana and Telegram
 
 ---
 
-## License
+## 📌 Notes
 
-MIT License. See `LICENSE` for full details.
+DARWIN is intentionally a visibility and detection engine; it is not an enforcement or blocking framework. This makes it ideal for security research, incident detection, and telemetry architecture validation.
+
+---
+
+## 📄 License
+
+MIT License. See `LICENSE` for details.
