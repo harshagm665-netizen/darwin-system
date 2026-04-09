@@ -101,9 +101,9 @@ Full alert record:
 
 ## 🎛️ Visual Output
 
-![Live System Activity](./images/Screenshot 2026-04-09 153923.png)
+![Live System Activity](./images/live-system-activity.png)
 
-![Suspicious Sudo Usage Alert](./images/Screenshot 2026-04-09 163011.png)
+![Suspicious Sudo Usage Alert](./images/suspicious-sudo-alert.png)
 
 ---
 
