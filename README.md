@@ -101,6 +101,11 @@ Full alert record:
 
 ## 🎛️ Visual Output
 
+These visuals illustrate the DARWIN pipeline in action:
+
+- **Live System Activity:** process and syscall execution trends captured by eBPF and displayed in Grafana.
+- **Suspicious Sudo Usage Alert:** Grafana alert instance showing a detected privilege escalation event.
+
 ![Live System Activity](./images/live-system-activity.png)
 
 ![Suspicious Sudo Usage Alert](./images/suspicious-sudo-alert.png)
